@@ -235,11 +235,15 @@ $lipidos = number_format($fila['total']/7, 2);
 //calculamos calorias
 $calTotales = $proteinas*4 + $carbohidratos*4 + $lipidos*8.8;
 
+//acción dinámico específica de los alimentos
+$accionDinamicoEspecifica = ($proteinas*4)*1.30 + ($carbohidratos*4)*1.05 + ($lipidos*8.8)*1.14;
+
 //si no hemos puesto datos al dividir entre 0 nos da un warning, aqui no nos importa asi que ponemos @
 echo "Carbohidratos: ".@number_format(($carbohidratos*4*100/$calTotales), 2)." %<br>";
 echo "Proteinas: ".@number_format(($proteinas*4*100/$calTotales), 2)." %<br>";
 echo "Lipidos: ".@number_format(($lipidos*8.8*100/$calTotales), 2)." %<br>";
-}
+echo "Calorias totales + Accion dinamico especifica de los alimentos: <br>".number_format($calTotales,2)." kcal + ".number_format(($accionDinamicoEspecifica-$calTotales), 2)." kcal = ".number_format($accionDinamicoEspecifica, 2)." kcal";
 
+}
 
  ?>

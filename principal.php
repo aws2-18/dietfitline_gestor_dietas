@@ -46,7 +46,7 @@ mostrarTodo('domingo');
 
 // Calculamos los elementos semanales que necesitemos
 echo "<h1>MEDIA SEMANAL</h1>";
-calculoSemanal("calorias","kcal");
+//calculoSemanal("calorias","kcal");
 calculoSemanal("carbohidratos","gr");
 calculoSemanal("proteinas","gr");
 calculoSemanal("lipidos","gr");
